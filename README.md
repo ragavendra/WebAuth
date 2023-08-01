@@ -28,7 +28,6 @@ dotnet aspnet-codegenerator identity -dc WebAuth.Data.ApplicationDbContext --fil
 ### Details
 For more details, please refer [here](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-7.0&tabs=netcore-cli)
 
-```
 ### License
 Free for non-commercial use, but please read ![LICENSE](LICENSE) for commercial use, other(s) and support.
 

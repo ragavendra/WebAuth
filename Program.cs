@@ -46,6 +46,23 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.SlidingExpiration = true;
 });
 
+var configuration = builder.Configuration;
+
+builder.Services.AddAuthentication()
+   .AddGoogle(googleOptions =>
+   {
+       googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
+       googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+
+   })
+   .AddMicrosoftAccount(microsoftOptions =>
+   {
+       microsoftOptions.ClientId = configuration["Authentication:Microsoft:ClientId"];
+       microsoftOptions.ClientSecret = configuration["Authentication:Microsoft:ClientSecret"];
+   });
+
+Console.WriteLine("The info " + configuration["Authentication:Microsoft:ClientId"]);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -3,7 +3,7 @@ Starter kit to begin building your app with user register, login and other servi
 
 ## Instructions
 
-Run below steps to start from the beginning
+Run the below steps to start from the beginning
 
 ```
 // Install code generator
